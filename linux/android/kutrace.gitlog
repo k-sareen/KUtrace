@@ -1,0 +1,23 @@
+commit b38f8a87c3c9365ad1f26427a0f999e5a3efe538
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Thu Jul 13 20:47:54 2023 +0000
+
+    WIP: Fix IPC calculation
+
+commit 0e06a2f3d329719156a459f274cead85f63e16d4
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Thu Jul 6 01:48:36 2023 +0000
+
+    Compile the KUtrace module with LLVM and Android
+    
+    Since the Android kernel build process uses LLVM for compilation, we
+    have to edit how we test for microarchitecture. The Android kernel also
+    does not export the `has_capability` function for use with kernel
+    modules so we disable checking if the current user has permissions to
+    trace.
+
+commit a0d14cbcc565508e83d583a0a90a3c878189e785
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Thu Jul 6 00:38:19 2023 +0000
+
+    Initial commit

@@ -1,0 +1,48 @@
+commit a938bffe02b1e9a769808adf1e72d2d44207a68d
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Wed Jul 19 02:23:46 2023 +0000
+
+    Add KUtrace events for kernel faults and pending work
+
+commit aba9da35c165c7e5513b104a461c5c051c59913e
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Fri Jul 14 00:17:49 2023 +0000
+
+    Fix hardcoded 0xF7 IPI
+
+commit 2cf2e6b58841b1ea9fca9fff2d887a715f64c4dc
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Wed Jul 12 00:22:19 2023 +0000
+
+    Fix KUTRACE_BOTTOM_HALF constant
+
+commit 964bb5261e522c232bd279d8aafe98c0e4fe1aba
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Tue Jul 11 00:18:09 2023 +0000
+
+    Fix PC sampling
+
+commit a83061e3a76493cea8d473bec4ff0e4be03fa8ff
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Thu Jul 6 01:45:18 2023 +0000
+
+    Add the KUtrace loadable module to the Makefile for external modules
+
+commit 614546764435af6f8abb5880987add561d0dfdb5
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Wed Jul 5 14:08:01 2023 +0000
+
+    Add KUtrace headers to the device kernel
+    
+    We duplicate the KUtrace headers in the device kernel as otherwise the
+    <linux/kutrace.h> is not included in the generated kernel headers.
+
+commit 4e960d365da771f1b0e6a9f02c7c339ca84bee59
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Wed Jul 5 12:45:58 2023 +0000
+
+    Add the KUtrace symbols to the stable GKI ABI
+    
+    This commit adds the symbols exported by KUtrace to the stable GKI ABI
+    as the build fails when trying to compare the AOSP GKI symbols list and
+    the device GKI symbols list.

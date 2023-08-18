@@ -1,0 +1,167 @@
+commit 827ef284462a9d9694a4c8bf5a9cc6a84df3145b
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Wed Jul 19 02:17:54 2023 +0000
+
+    Add KUtrace events for kernel faults and pending work
+    
+    This commit adds KUtrace events for kernel faults and pending work when
+    processing faults. The kernel fault event is triggered when a fault
+    occurs during kernel code, hence it is a kernel code to kernel code
+    transition. The pending work event can be triggered before the kernel
+    exits back to user code when the kernel finds there is pending work left
+    such as scheduling, signal handling, etc.
+
+commit 99a82393243d99176d31249f63fe18098534250f
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Fri Jul 14 00:21:00 2023 +0000
+
+    WIP: Add trace event for all fault routines
+
+commit ce97829041fc354545d792c718af7c61f1eca315
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Fri Jul 14 00:17:21 2023 +0000
+
+    Fix hardcoded 0xF7 IPI
+
+commit ed5229dec7bb5dc9729cbb4b14186b04f14e1ecc
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Wed Jul 12 01:03:02 2023 +0000
+
+    WIP: Fix tracing CPU frequency transitions
+
+commit 43daca605954d419b90dc41524155d2f5c3c8d54
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Wed Jul 12 00:41:45 2023 +0000
+
+    WIP: Fix associativity of boolean-AND operator
+
+commit d4106406229b76921cd4a7f34620127cf2dbcbbb
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Wed Jul 12 00:21:48 2023 +0000
+
+    WIP: Fix KUTRACE_BOTTOM_HALF constant
+
+commit 1467e3765a1dd3fb7bbff33c9972dedb16a93ce4
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Tue Jul 11 00:33:24 2023 +0000
+
+    Fix parens
+
+commit e5b27be27140877c063c2eaf3df9e20340e2b281
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Tue Jul 11 00:17:50 2023 +0000
+
+    WIP: Fix PC sampling
+
+commit 83f1651eb292776eeb21a94e25dcc4181ce6ac70
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Mon Jul 10 04:13:08 2023 +0000
+
+    Fix parens
+
+commit 25f319d8a9cffe6b28c4d36a71afb7b6241789ec
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Mon Jul 10 04:12:08 2023 +0000
+
+    WIP: Add PSTATE2 to kutrace.h
+
+commit 911b6d7f24a7beedf174a7dcff4c5de2b0e69fe6
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Mon Jul 10 04:09:10 2023 +0000
+
+    Fix parens
+
+commit 22d28cb603d841d75e7dfc6b93df8bf6444461b8
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Mon Jul 10 04:04:11 2023 +0000
+
+    WIP: Add support for PC sampling at timer interrupts
+
+commit c11238ca4fb0ec2c0b8b842efac766d8d379446f
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Mon Jul 10 03:45:39 2023 +0000
+
+    WIP: Add support for tracing when a new process is created
+
+commit a3ff17dba5d321b6e1394c8309625652d50d4ada
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Mon Jul 10 03:42:19 2023 +0000
+
+    WIP: Add support for tracing when CPUs go to idle
+
+commit e27c289f261907159a63948244e48d2007423fb9
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Mon Jul 10 03:40:15 2023 +0000
+
+    WIP: Fix tracing IPIs
+
+commit d13672db03819e07c68af90a2d8e81d6f245a55d
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Mon Jul 10 03:32:40 2023 +0000
+
+    WIP: Fix the arg and return values for syscalls
+
+commit 0ac61a13d9331f44a624995f17d6f90d5cf8f78d
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Mon Jul 10 03:28:53 2023 +0000
+
+    WIP: Add support for tracing CPU frequency transitions to KUtrace
+
+commit 0a5e249a94baf39bb6e8b9c8a8821e6b75d284d7
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Fri Jul 7 04:41:11 2023 +0000
+
+    WIP: Add support for tracing page faults to KUtrace
+
+commit 9961489901bbbb99ba550d017b8f0c02c0416e53
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Fri Jul 7 04:32:36 2023 +0000
+
+    WIP: Add support for tracing interrupts to KUtrace
+
+commit 03420abcee4d4e27c374563b91072b0d21224d3e
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Fri Jul 7 02:29:50 2023 +0000
+
+    Add support for tracing context switches to KUtrace
+
+commit 5a1bca758bc6e20e6f639a6755ae409680a9ce02
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Thu Jul 6 10:51:12 2023 +0000
+
+    Add syscall tracing support to KUtrace
+
+commit 84502de4b8ab8c845f8189ef3c3ed70062787f31
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Wed Jul 5 10:46:29 2023 +0000
+
+    Update the stable GKI ABI
+    
+    The symbols were updated using the following command:
+      BUILD_CONFIG=aosp/build.config.gki.aarch64 \
+      LTO=thin \
+      build/build_abi.sh --update
+
+commit c05d4654e395c5af31a8c8b3ddad42f596576135
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Wed Jul 5 04:57:48 2023 +0000
+
+    Export the KUtrace kernel symbols
+    
+    Editing the `android/abi_gki_aarch64_generic` file to add the exported
+    KUtrace symbols updates the `Module.symvers` file, however this results
+    in a failing build as the autogenerated symbol list (from the
+    `android/abi_gki_aarch64.xml` file) does not contain the KUtrace
+    symbols. This commit also uses the `EXPORT_SYMBOL_GPL` macro instead.
+
+commit 1bbf593a05ddcb32b4f929a136f491f0d4e77c0d
+Author: Kunal Sareen <kunalsareen@google.com>
+Date:   Wed Jul 5 02:23:37 2023 +0000
+
+    Add the KUtrace headers and export KUtrace symbols
+    
+    This commit adds the KUtrace headers and exports the KUtrace symbols.
+    Due to the Android GKI project, you should build the GKI kernel with
+    BUILD_AOSP_KERNEL=1 build/build.sh in order to include the KUtrace
+    changes. The symbols are found in the generated `System.map` file but
+    not in the `Module.symvers` for some reason.
